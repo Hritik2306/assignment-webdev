@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 3 Solution</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#mobile-menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Food, LLC</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="mobile-menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#chicken">Chicken</a></li>
+          <li><a href="#mutton">Mutton</a></li>
+          <li><a href="#sushi">Sushi</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- PAGE HEADING -->
+  <h1 class="text-center">Our Menu</h1>
+
+  <div class="container">
+    <!-- Chicken Section -->
+    <div class="row content-box" id="chicken">
+      <div class="col-xs-12">
+        <h3 class="text-center">Chicken</h3>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="menu-card panel panel-default" data-toggle="modal" data-target="#chickenModal1">
+              <div class="panel-body text-center">
+                <h4>Grilled Chicken</h4>
+                <p>Click to see details!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="menu-card panel panel-default" data-toggle="modal" data-target="#chickenModal2">
+              <div class="panel-body text-center">
+                <h4>Fried Chicken</h4>
+                <p>Click to see details!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="menu-card panel panel-default" data-toggle="modal" data-target="#chickenModal3">
+              <div class="panel-body text-center">
+                <h4>Chicken Curry</h4>
+                <p>Click to see details!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional sections like Mutton and Sushi can follow the same pattern -->
+
+  </div>
+
+  <!-- MODALS -->
+  <div class="modal fade" id="chickenModal1" tabindex="-1" role="dialog" aria-labelledby="chickenModalLabel1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Grilled Chicken</h4>
+        </div>
+        <div class="modal-body">
+          <img src="https://via.placeholder.com/400x250" alt="Grilled Chicken">
+          <p>Delicious grilled chicken with herbs and spices.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="chickenModal2" tabindex="-1" role="dialog" aria-labelledby="chickenModalLabel2">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Fried Chicken</h4>
+        </div>
+        <div class="modal-body">
+          <img src="https://via.placeholder.com/400x250" alt="Fried Chicken">
+          <p>Crispy fried chicken, golden and delicious.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="chickenModal3" tabindex="-1" role="dialog" aria-labelledby="chickenModalLabel3">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Chicken Curry</h4>
+        </div>
+        <div class="modal-body">
+          <img src="https://via.placeholder.com/400x250" alt="Chicken Curry">
+          <p>Spicy chicken curry with rich flavors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Smooth Scroll -->
+  <script>
+    $(document).ready(function(){
+      $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        var target = this.hash;
+        $('html, body').animate({
+          scrollTop: $(target).offset().top - 60
+        }, 600);
+      });
+    });
+  </script>
+
+</body>
+</html>
