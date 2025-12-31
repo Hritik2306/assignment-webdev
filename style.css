@@ -1,0 +1,42 @@
+ <!-- Custom CSS -->
+  
+    body {
+      padding-top: 70px;
+      font-family: Arial, sans-serif;
+    }
+
+    .content-box {
+      background: #f8f8f8;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .content-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .menu-card {
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: scale(1.05);
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    .modal-body img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  
